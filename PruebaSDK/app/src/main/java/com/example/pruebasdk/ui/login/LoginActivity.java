@@ -5,6 +5,10 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+>>>>>>> Diego
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -37,17 +41,32 @@ import com.example.pruebasdk.databinding.ActivityLoginBinding;
 import java.util.HashMap;
 import java.util.Map;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Diego
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
 
     EditText username;
+<<<<<<< HEAD
     Button btnGuardar;
 
     RequestQueue requestQueue;
 
     private static  String URL1 = "http://192.168.0.9/blinkid/save.php";
+=======
+    EditText idBuscado;
+    Button btnGuardar;
+    Button btnBuscar;
+
+    RequestQueue requestQueue;
+
+    private static final String URL1 = "http://192.168.0.9/blinkid/save.php";
+>>>>>>> Diego
 
 
     @Override
@@ -78,6 +97,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String sexDesc = username.getText().toString().trim();
 
             createUser(sexDesc);
+<<<<<<< HEAD
+=======
+        }else if(id == R.id.btnBuscar){
+            Intent intent = new Intent(this, LoginActivity2.class);
+            intent.putExtra("id", idBuscado.getText().toString().trim());
+            startActivity(intent);
+
+>>>>>>> Diego
         }
     }
 
